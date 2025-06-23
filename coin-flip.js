@@ -1,13 +1,26 @@
 const coin = document.getElementById('coin');
 const flipButton = document.getElementById('flipButton');
 
+let isHeads = Math.random() < 0.5;
+let totalRotation = isHeads ? 0 : 180;
+
+coin.style.transform = `rotateY(${totalRotation}deg)`;
+
 flipButton.addEventListener('click', () => {
-  coin.textContent = '?';
-  coin.style.transform = 'rotateY(360deg)';
-  
+  flipButton.disabled = true;
+
+  const resultIsHeads = Math.random() < 0.5;
+  const spins = Math.floor(Math.random() * 6 + 10); // 10–15 full flips
+  const spinAmount = spins * 180;
+  const resultOffset = resultIsHeads ? 0 : 180;
+
+  totalRotation += spinAmount + resultOffset;
+
+  coin.style.transition = 'transform 1s ease-in-out';
+  coin.style.transform = `rotateY(${totalRotation}deg)`;
+
   setTimeout(() => {
-    const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
-    coin.textContent = result;
-    coin.style.transform = 'none';
-  }, 600);
+    isHeads = resultIsHeads;
+    flipButton.disabled = false;
+  }, 1000);
 });

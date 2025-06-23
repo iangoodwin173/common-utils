@@ -113,21 +113,40 @@ button {
   align-items: center;
   gap: 1.5rem;
   margin-top: 2rem;
+  perspective: 1000px; /* Needed for 3D rotation */
 }
 
-.coin-display {
-  font-size: 4rem;
+.coin {
   width: 120px;
   height: 120px;
-  border: 3px solid #333;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: gold;
-  font-weight: bold;
-  transition: transform 0.6s ease;
+  position: relative;
+  transform-style: preserve-3d;
+  /* transition: transform 2s ease; */
 }
+
+.face {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #333;
+}
+
+.heads {
+  background-image: url('quarter-heads.png');
+}
+
+.tails {
+  background-image: url('quarter-tails.png');
+  transform: rotateY(180deg);
+}
+
+
+
+
 
 /* SPINNER CSS WORK IN PROGRESS
 
