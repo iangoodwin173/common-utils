@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>⏲️ Timer</h1>
+  <div class="timer-container">
+    <label>
+      Hours:
+      <input type="number" id="hours" min="0" value="0">
+    </label>
+    <label>
+      Minutes:
+      <input type="number" id="minutes" min="0" value="0">
+    </label>
+    <label>
+      Seconds:
+      <input type="number" id="seconds" min="0" value="0">
+    </label>
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+    <div id="countdownDisplay">00:00:00</div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Time is up!</h2>
+      <button id="closeModal">OK</button>
+    </div>
+  </div>
+
+  <script src="timer.js"></script>
+</body>
+</html>

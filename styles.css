@@ -1,3 +1,5 @@
+/* MAIN CSS */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -47,4 +49,58 @@ footer {
   margin-top: 4rem;
   font-size: 0.875rem;
   color: #888;
+}
+
+/* TIMER CSS */
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.timer-container input {
+  width: 60px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#countdownDisplay {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
