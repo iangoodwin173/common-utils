@@ -17,6 +17,13 @@
   /* transition: transform 2s ease; */
 }
 
+.home-button {
+  position: absolute;
+  left: 77.2rem;
+  top: 20rem;
+}
+
+
 .face {
   width: 120px;
   height: 120px;
