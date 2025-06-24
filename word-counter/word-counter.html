@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="word-counter.css" />
+</head>
+<body>
+  <h1>Word Counter</h1>
+  <div class="counter-container">
+    <textarea id="textInput" placeholder="Start typing..."></textarea>
+    <div class="counts">
+      <p><strong>Words:</strong> <span id="wordCount">0</span></p>
+      <p><strong>Characters:</strong> <span id="charCount">0</span></p>
+      <p><strong>Characters (no spaces):</strong> <span id="charNoSpaceCount">0</span></p>
+    </div>
+    <button id="clearBtn">Clear</button>
+  </div>
+  <script src="word-counter.js"></script>
+</body>
+</html>
