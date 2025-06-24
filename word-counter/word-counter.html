@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="word-counter.css" />
 </head>
 <body>
-  <h1>Word Counter</h1>
+  
   <div class="counter-container">
+    <h1>Word Counter</h1>
+  <button onclick="location.href='../index.html'" class="home-button">Home
+    
+  </button>
     <textarea id="textInput" placeholder="Start typing..."></textarea>
     <div class="counts">
       <p><strong>Words:</strong> <span id="wordCount">0</span></p>
@@ -18,9 +22,7 @@
     <button id="clearBtn">Clear</button>
   </div>
 
-  <button onclick="location.href='../index.html'" class="home-button">Home
-    
-  </button>
+  
   <script src="word-counter.js"></script>
 </body>
 </html>

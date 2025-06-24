@@ -17,11 +17,7 @@
   /* transition: transform 2s ease; */
 }
 
-.home-button {
-  position: absolute;
-  left: 77.2rem;
-  top: 20rem;
-}
+
 
 
 .face {
@@ -42,4 +38,29 @@
 .tails {
   background-image: url('quarter-tails.png');
   transform: rotateY(180deg);
+}
+
+.home-button {
+    
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }

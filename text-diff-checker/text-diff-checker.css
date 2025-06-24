@@ -42,15 +42,14 @@ textarea,
 }
 
 button {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: none;
+  cursor: pointer;
   background-color: #333;
   color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
@@ -83,4 +82,19 @@ button:hover {
 .removed {
   background-color: #f9d4d4;
   color: red;
+}
+
+
+.home-button {
+    
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+
 }

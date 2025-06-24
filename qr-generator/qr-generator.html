@@ -7,16 +7,18 @@
   <link rel="stylesheet" href="qr-generator.css" />
 </head>
 <body>
-  <h1>QR Code Generator</h1>
+  
   <div class="qr-container">
+    <h1>QR Code Generator</h1>
+  <button onclick="location.href='../index.html'" class="home-button">Home
+    
+  </button>
     <input type="text" id="qrInput" placeholder="Enter text or URL..." />
     <button id="generateBtn">Generate QR Code</button>
     <div id="qrCode"></div>
   </div>
 
-  <button onclick="location.href='../index.html'" class="home-button">Home
-    
-  </button>
+  
 
   <!-- QRCode.js library -->
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
