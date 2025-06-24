@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-pair,
+.output-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.input-section,
+.output-pair > div {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea,
+.diff-output {
+  width: 100%;
+  min-height: 120px;
+  height: auto;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.output-pair {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.diff-output {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  height: 120px; /* fixed height */
+  overflow-y: auto; /* vertical scroll if needed */
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.added {
+  background-color: #d4f9d4;
+  color: green;
+}
+
+.removed {
+  background-color: #f9d4d4;
+  color: red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Difference Checker</title>
+  <link rel="stylesheet" href="text-diff-checker.css" />
+</head>
+<body>
+  <h1>Text Difference Checker</h1>
+  <div class="input-pair">
+    <div class="input-section">
+      <label for="originalText">Original Text</label>
+      <textarea id="originalText" placeholder="Paste original text here..."></textarea>
+    </div>
+
+    <div class="input-section">
+      <label for="modifiedText">Modified Text</label>
+      <textarea id="modifiedText" placeholder="Paste modified text here..."></textarea>
+    </div>
+  </div>
+
+  <button id="compareBtn">Compare</button>
+
+  <div class="output-pair">
+    <div>
+      <h2>Original</h2>
+      <div id="originalOutput" class="diff-output"></div>
+    </div>
+
+    <div>
+      <h2>Modified</h2>
+      <div id="modifiedOutput" class="diff-output"></div>
+    </div>
+  </div>
+
+  <button onclick="location.href='../index.html'" class="home-button">Home
+    
+  </button>
+
+  <script src="text-diff-checker.js"></script>
+</body>
+</html>
