@@ -1,14 +1,19 @@
+/* MODERN SCIENCE NOTEBOOK THEME */
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eef3fa;
+  color: #2c3e50;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #2a4365;
+  font-weight: 600;
 }
 
 .section {
@@ -16,61 +21,65 @@ h1 {
 }
 
 .section h2 {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
-  color: #444;
+  border-bottom: 2px solid #b3c7e6;
+  padding-bottom: 0.4rem;
+  color: #1e355f;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
+/* Formula cards */
 .formula {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
   border-radius: 10px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(90, 124, 173, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formula:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(90, 124, 173, 0.15);
 }
 
 .formula h3 {
   margin-top: 0;
-  font-size: 1.1rem;
-  color: #222;
+  font-size: 1.15rem;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+/* Buttons */
+.copy-btn,
+.home-button,
+button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: #3056d3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover,
+.home-button:hover,
+button:hover {
+  background-color: #2442a7;
+  transform: translateY(-1px);
 }
 
 .copy-btn {
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 0.6rem;
 }
 
-.copy-btn:hover {
-  background-color: #555;
-}
-
+/* Home button (centered below all) */
 .home-button {
-    
   display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  background-color: #000000;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-
-}
-
-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
+  margin: 2rem auto 0;
 }

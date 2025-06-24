@@ -1,54 +1,80 @@
+/* SPINNER WHEEL — CARNIVAL PICKER THEME */
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #fff8ec, #ffe7f0);
+  color: #333;
   padding: 2rem;
-  background-color: #f9f9f9;
+  text-align: center;
+}
+
+h1 {
+  color: #e63946;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .spinner-setup {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #segmentsInput {
-  width: 300px;
-  height: 150px;
+  width: 320px;
+  height: 160px;
   font-size: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid #fcbf49;
+  background-color: #fffefc;
+  box-shadow: inset 0 0 5px rgba(252, 191, 73, 0.2);
 }
 
 canvas {
   margin: 2rem auto;
   display: block;
-  border: 2px solid #333;
+  border: 5px solid #f77f00;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
 }
 
+/* Button styling */
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.4rem;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #333;
+  background-color: #f77f00;
   color: white;
   border: none;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(247, 127, 0, 0.2);
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #d56700;
+  transform: translateY(-2px);
 }
 
-.home-button {
-    
-  display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  background-color: #000000;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
 
+
+.home-button:hover {
+  background-color: #111;
+}
+
+/* Result Modal (if used) */
+#resultModal {
+  background-color: #ffece1;
+  color: #d1495b;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(209, 73, 91, 0.2);
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: none;
 }

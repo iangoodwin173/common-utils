@@ -1,22 +1,28 @@
+/* TEXT DIFFERENCE CHECKER — REVISION STUDIO THEME */
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #fdfefe, #eaf2fb);
+  color: #2c3e50;
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 600;
+  color: #2b2b2b;
 }
 
+/* Layout containers */
 .input-pair,
 .output-pair {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .input-section,
@@ -26,75 +32,103 @@ h1 {
   flex-direction: column;
 }
 
-textarea,
-.diff-output {
-  width: 100%;
-  min-height: 120px;
-  height: auto;
-  padding: 0.75rem;
-  font-size: 1rem;
-  resize: vertical;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 0.5rem;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
+/* Labels */
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #3d5166;
 }
 
-button {
-  padding: 0.5rem 1rem;
+/* Textareas */
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 0.85rem;
   font-size: 1rem;
-  cursor: pointer;
-  background-color: #333;
-  color: white;
+  resize: vertical;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #90cdf4;
+  box-shadow: 0 0 0 3px rgba(144, 205, 244, 0.4);
+}
+
+/* Button */
+button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
+  background-color: #2f80ed;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(47, 128, 237, 0.15);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #1c64d1;
+  transform: translateY(-2px);
 }
 
+/* Output boxes */
 .output-pair {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .diff-output {
-  background-color: white;
+  background-color: #ffffff;
   padding: 1rem;
-  border-radius: 6px;
-  height: 120px; /* fixed height */
-  overflow-y: auto; /* vertical scroll if needed */
+  border-radius: 10px;
+  height: 140px;
+  overflow-y: auto;
   overflow-x: hidden;
   white-space: pre-wrap;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  border: 1px solid #d1dce5;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.03);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #1f2d3d;
 }
 
+/* Diff highlights */
 .added {
-  background-color: #d4f9d4;
-  color: green;
+  background-color: #d1f7d1;
+  color: #226622;
+  padding: 0 3px;
+  border-radius: 4px;
 }
 
 .removed {
-  background-color: #f9d4d4;
-  color: red;
+  background-color: #ffe0e0;
+  color: #a22;
+  padding: 0 3px;
+  border-radius: 4px;
 }
 
+/* Optional scrollbar sync (already JS-enabled) */
+.diff-output::-webkit-scrollbar {
+  width: 6px;
+}
 
-.home-button {
-    
-  display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  background-color: #000000;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+.diff-output::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
 
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .input-pair,
+  .output-pair {
+    flex-direction: column;
+  }
 }

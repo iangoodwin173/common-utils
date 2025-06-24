@@ -1,117 +1,101 @@
-/* DICE ROLLER CSS */
+/* DICE ROLLER — PLAYROOM ARCADE THEME */
+
+body {
+  background-color: #faf6f1;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #5c2d91;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
 .dice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .dice-display {
-  font-size: 3rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .dice {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 2px;
-  background-color: #f3f3f3;
-  border: 2px solid #333;
-  border-radius: 8px;
+  gap: 4px;
+  background-color: #fff;
+  border: 3px solid #5c2d91;
+  border-radius: 12px;
   position: relative;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(92, 45, 145, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.dice:hover {
+  transform: scale(1.05);
 }
 
 .dice .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #5c2d91;
 }
 
-.dice .dot-1 {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-}
-
-.dice .dot-2 {
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.dice .dot-3 {
-  grid-column: 3;
-  grid-row: 3;
-  justify-self: center;
-}
-
-.dice .dot-4 {
-  grid-column: 1;
-  grid-row: 3;
-  justify-self: center;
-}
-
-.dice .dot-5 {
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.dice .dot-6 {
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: center;
-}
-
-.dice .dot-7 {
-  grid-column: 3;
-  grid-row: 2;
-  justify-self: center;
-}
-
-.dice .dot-8 {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.dice .dot-9 {
-  grid-column: 2;
-  grid-row: 3;
-  justify-self: center;
-}
+.dice .dot-1  { grid-column: 2; grid-row: 2; justify-self: center; }
+.dice .dot-2  { grid-column: 1; grid-row: 1; justify-self: center; }
+.dice .dot-3  { grid-column: 3; grid-row: 3; justify-self: center; }
+.dice .dot-4  { grid-column: 1; grid-row: 3; justify-self: center; }
+.dice .dot-5  { grid-column: 3; grid-row: 1; justify-self: center; }
+.dice .dot-6  { grid-column: 1; grid-row: 2; justify-self: center; }
+.dice .dot-7  { grid-column: 3; grid-row: 2; justify-self: center; }
+.dice .dot-8  { grid-column: 2; grid-row: 1; justify-self: center; }
+.dice .dot-9  { grid-column: 2; grid-row: 3; justify-self: center; }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.2rem;
   font-size: 1rem;
-  margin: 0.25rem;
+  background-color: #5c2d91;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+button:hover {
+  background-color: #462275;
+  transform: translateY(-2px);
+}
 
 #diceTypeInput, #diceTypeLabel {
-    display: none;
+  display: none;
 }
 
+/* Home Button */
 .home-button {
-    
   display: block;
-  margin: 1rem auto;
+  margin: 2rem auto 0;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
-  border: none;
-  background-color: #000000;
+  background-color: #5c2d91;
   color: white;
   border-radius: 6px;
   cursor: pointer;
-
+  border: none;
 }
